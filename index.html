@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHOPON | Social World</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+      background:
+        radial-gradient(circle at top, #174c91 0%, transparent 45%),
+        linear-gradient(135deg, #06152e, #092b55, #041326);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px 15px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 35px 25px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 25px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    }
+
+    .profile {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #48a8ff;
+      padding: 4px;
+      background: #0b2b50;
+      box-shadow: 0 0 25px rgba(56,160,255,0.4);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 30px;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .verified {
+      color: #50baff;
+      font-size: 17px;
+    }
+
+    .bio {
+      color: #c5dcf5;
+      font-size: 14px;
+      margin-bottom: 27px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 13px;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: 0.3s ease;
+    }
+
+    .social:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      filter: brightness(1.15);
+    }
+
+    .social span {
+      font-size: 20px;
+    }
+
+    .facebook {
+      background: #1877f2;
+    }
+
+    .tiktok {
+      background: #171717;
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    }
+
+    .whatsapp {
+      background: #128c53;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: #91b6dc;
+      font-size: 12px;
+    }
+
+    .footer strong {
+      color: #50baff;
+    }
+
+    @media (max-width: 360px) {
+      .container {
+        padding: 28px 18px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- Profile Photo -->
+    <img
+      src="profile.jpg"
+      alt="SHOPON Profile"
+      class="profile"
+      onerror="this.src='https://placehold.co/300x300/123b69/ffffff?text=SHOPON'"
+    >
+
+    <h1>
+      SHOPON <span class="verified">✦</span>
+    </h1>
+
+    <p class="bio">welcome to my social world</p>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+
+      <a
+        class="social facebook"
+        href="https://www.facebook.com/share/1auG6rXqJ2/"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span>f</span> Facebook
+      </a>
+
+      <a
+        class="social tiktok"
+        href="https://www.tiktok.com/@shopon_ahmed.1?"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span>♪</span> TikTok
+      </a>
+
+      <a
+        class="social instagram"
+        href="https://www.instagram.com/shopon17608?dlrf=aHRleWF3NGN1c3lq"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span>◎</span> Instagram
+      </a>
+
+      <a
+        class="social whatsapp"
+        href="https://wa.me/qr/GYBENV73RBVBG1"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span>✆</span> WhatsApp
+      </a>
+
+    </div>
+
+    <div class="footer">
+      Made with 💙 by <strong>SHOPON</strong>
+    </div>
+
+  </main>
+
+  <script>
+    // Website welcome message
+    console.log("Welcome to SHOPON Social World!");
+
+    // Open external social links in a new tab
+    document.querySelectorAll(".social").forEach(link => {
+      link.addEventListener("click", () => {
+        console.log("Opening: " + link.textContent.trim());
+      });
+    });
+  </script>
+
+</body>
+  </html>
